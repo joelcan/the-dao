@@ -12,6 +12,7 @@ contract DAOInterface {
     uint constant quorumHalvingPeriod = 25 weeks;
     // Period after which a proposal is closed
     // (used in the case ‘executeProposal‘ fails because it throws)
+    // [?Period starts when? After later of creationGracePeriod and debate period?]
     uint constant executeProposalPeriod = 10 days;
     // Denotes the maximum proposal deposit that can be given. It is given as
     // a fraction of total Ether spent plus balance of the DAO
