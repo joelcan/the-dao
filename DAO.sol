@@ -16,6 +16,7 @@ contract DAOInterface {
     uint constant executeProposalPeriod = 10 days;
     // Denotes the maximum proposal deposit that can be given. It is given as
     // a fraction of total Ether spent plus balance of the DAO
+    // [?What is this?]
     uint constant maxDepositDivisor = 100;
 
     // Proposals to spend the DAO’s ether or to choose a new Curator
@@ -81,7 +82,7 @@ contract DAOInterface {
         string description;
         // A unix timestamp, denoting the end of the voting period
         uint votingDeadline;
-        // True if the proposal’s votes have yet to be counted, otherwise False
+        // True if the proposal’ votes have yet to be counted, otherwise False
         bool open;
         // True if quorum has been reached, the votes have been counted, and
         // the majority said yes
@@ -92,6 +93,7 @@ contract DAOInterface {
         // is taken from the msg.value of a newProposal call.
         uint proposalDeposit;
         // True if this proposal is to assign a new Curator
+        // [?Does this curator only deal with this project or replace the DAO curator?]
         bool newCurator;
         // Data needed for splitting the DAO
         SplitData[] splitData;
